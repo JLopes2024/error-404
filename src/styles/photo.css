@@ -1,0 +1,789 @@
+.photo-page {
+  width: 100%;
+  min-height: 100svh;
+
+  padding:
+    max(20px, env(safe-area-inset-top))
+    16px
+    max(28px, env(safe-area-inset-bottom));
+
+  color: var(--azul);
+
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(250, 218, 52, 0.3),
+      transparent 25%
+    ),
+    var(--creme);
+}
+
+.photo-container {
+  width: 100%;
+  max-width: 430px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* ======================================================
+   CABEÇALHO
+====================================================== */
+
+.photo-header {
+  width: 100%;
+
+  margin-bottom: 22px;
+
+  text-align: center;
+}
+
+.photo-header > span {
+  display: inline-block;
+
+  margin-bottom: 9px;
+
+  padding: 5px 9px;
+
+  background:
+    var(--amarelo);
+
+  border:
+    2px solid var(--azul);
+
+  font-family:
+    'Barlow Condensed',
+    sans-serif;
+
+  font-size: 0.67rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.13em;
+
+  box-shadow:
+    3px 3px 0
+    var(--azul);
+}
+
+.photo-header h1 {
+  margin-bottom: 10px;
+
+  font-family:
+    'Anton',
+    sans-serif;
+
+  font-size:
+    clamp(
+      2.8rem,
+      14vw,
+      4.2rem
+    );
+
+  font-weight: 400;
+
+  line-height: 0.85;
+}
+
+.photo-header h1 strong {
+  display: block;
+
+  color:
+    var(--coral);
+
+  font-weight: 400;
+}
+
+.photo-header p {
+  max-width: 300px;
+
+  margin: 0 auto;
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  line-height: 1.35;
+}
+
+
+/* ======================================================
+   CÂMERA
+====================================================== */
+
+.camera-area {
+  width: 100%;
+
+  display: none;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.camera-area--ready {
+  display: flex;
+}
+
+.camera-frame {
+  width: 100%;
+
+  aspect-ratio: 4 / 5;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border:
+    4px solid var(--azul);
+
+  background:
+    var(--azul);
+
+  box-shadow:
+    7px 7px 0
+    var(--coral);
+}
+
+.camera-frame::before {
+  content: '';
+
+  position: absolute;
+
+  width: 150px;
+  height: 24px;
+
+  top: 25px;
+  left: -38px;
+
+  z-index: 4;
+
+  background:
+    var(--turquesa);
+
+  transform:
+    rotate(-8deg);
+
+  pointer-events: none;
+}
+
+.camera-frame video {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transform:
+    scaleX(-1);
+}
+
+
+/* ======================================================
+   OVERLAY
+====================================================== */
+
+.camera-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 3;
+
+  pointer-events: none;
+}
+
+.camera-overlay-top {
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  padding:
+    5px 8px;
+
+  border:
+    2px solid var(--azul);
+
+  background:
+    var(--amarelo);
+
+  font-family:
+    'Barlow Condensed',
+    sans-serif;
+
+  font-size: 0.54rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.07em;
+}
+
+
+/*
+  AQUI ESTÁ A PRINCIPAL MUDANÇA.
+
+  Agora é um rodapé real.
+*/
+
+.camera-overlay-bottom {
+  position: absolute;
+
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+
+  height: 62px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding:
+    8px 10px;
+
+  border:
+    2px solid var(--azul);
+
+  background:
+    rgba(
+      246,
+      238,
+      216,
+      0.94
+    );
+}
+
+.camera-footer-brand {
+  flex-shrink: 0;
+
+  padding:
+    5px 7px;
+
+  background:
+    var(--coral);
+
+  color:
+    var(--azul);
+
+  font-family:
+    'Barlow Condensed',
+    sans-serif;
+
+  font-size: 0.48rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.08em;
+}
+
+.camera-overlay-bottom strong {
+  display: block;
+
+  margin: 0;
+
+  color:
+    var(--azul);
+
+  font-family:
+    'Anton',
+    sans-serif;
+
+  font-size:
+    clamp(
+      1rem,
+      5vw,
+      1.45rem
+    );
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+
+/* ======================================================
+   DICA
+====================================================== */
+
+.camera-tip {
+  max-width: 300px;
+
+  margin:
+    18px auto
+    14px;
+
+  text-align: center;
+
+  font-size: 0.8rem;
+
+  font-weight: 600;
+
+  line-height: 1.35;
+}
+
+
+/* ======================================================
+   BOTÃO CÂMERA
+====================================================== */
+
+.camera-button {
+  width: 74px;
+  height: 74px;
+
+  display: grid;
+
+  place-items: center;
+
+  padding: 0;
+
+  border:
+    5px solid
+    var(--azul);
+
+  border-radius: 50%;
+
+  background:
+    var(--creme);
+
+  cursor: pointer;
+}
+
+.camera-button span {
+  width: 51px;
+  height: 51px;
+
+  display: block;
+
+  border-radius: 50%;
+
+  border:
+    3px solid
+    var(--azul);
+
+  background:
+    var(--coral);
+}
+
+.camera-button:active {
+  transform:
+    scale(0.93);
+}
+
+
+/* ======================================================
+   CARREGANDO
+====================================================== */
+
+.camera-message {
+  width: 100%;
+
+  min-height: 320px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  border:
+    3px solid
+    var(--azul);
+
+  background:
+    var(--branco);
+
+  box-shadow:
+    6px 6px 0
+    var(--azul);
+
+  text-align: center;
+}
+
+.camera-loader {
+  width: 42px;
+  height: 42px;
+
+  border:
+    5px solid
+    rgba(
+      10,
+      33,
+      77,
+      0.15
+    );
+
+  border-top-color:
+    var(--coral);
+
+  border-radius: 50%;
+
+  animation:
+    cameraSpin
+    0.7s
+    linear
+    infinite;
+}
+
+@keyframes cameraSpin {
+  to {
+    transform:
+      rotate(360deg);
+  }
+}
+
+.camera-message strong {
+  font-family:
+    'Barlow Condensed',
+    sans-serif;
+
+  font-weight: 900;
+}
+
+.camera-message span {
+  max-width: 250px;
+
+  font-size: 0.82rem;
+
+  line-height: 1.35;
+}
+
+
+/* ======================================================
+   ERRO
+====================================================== */
+
+.camera-error {
+  width: 100%;
+
+  padding:
+    22px 18px;
+
+  border:
+    3px solid
+    var(--azul);
+
+  background:
+    var(--coral);
+
+  box-shadow:
+    6px 6px 0
+    var(--azul);
+
+  text-align: center;
+}
+
+.camera-error > span {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+
+  place-items: center;
+
+  margin:
+    0 auto
+    12px;
+
+  background:
+    var(--azul);
+
+  color:
+    var(--creme);
+
+  font-family:
+    'Anton',
+    sans-serif;
+}
+
+.camera-error h2 {
+  margin-bottom: 9px;
+
+  font-family:
+    'Barlow Condensed',
+    sans-serif;
+
+  font-size: 1.5rem;
+
+  font-weight: 900;
+}
+
+.camera-error p {
+  margin-bottom: 18px;
+}
+
+.camera-error button {
+  width: 100%;
+
+  min-height: 54px;
+
+  border: none;
+
+  background:
+    var(--azul);
+
+  color:
+    var(--creme);
+
+  font-family:
+    'Barlow Condensed',
+    sans-serif;
+
+  font-weight: 900;
+}
+
+
+/* ======================================================
+   RESULTADO
+====================================================== */
+
+.photo-result {
+  width: 100%;
+
+  text-align: center;
+}
+
+.photo-result-label {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  padding:
+    6px 11px;
+
+  border:
+    2px solid
+    var(--azul);
+
+  background:
+    var(--turquesa);
+
+  font-family:
+    'Barlow Condensed',
+    sans-serif;
+
+  font-size: 0.72rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.1em;
+
+  box-shadow:
+    3px 3px 0
+    var(--azul);
+}
+
+.photo-result img {
+  width: 100%;
+
+  display: block;
+
+  border:
+    3px solid
+    var(--azul);
+
+  box-shadow:
+    7px 7px 0
+    var(--coral);
+}
+
+.photo-result > p {
+  margin:
+    24px 0
+    22px;
+
+  font-size: 0.88rem;
+
+  line-height: 1.4;
+}
+
+.photo-result > p strong {
+  display: block;
+
+  margin-top: 4px;
+
+  font-family:
+    'Barlow Condensed',
+    sans-serif;
+
+  font-size: 1.25rem;
+
+  font-weight: 900;
+}
+
+
+/* ======================================================
+   BOTÕES
+====================================================== */
+
+.photo-actions {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.photo-primary,
+.photo-secondary,
+.photo-tertiary {
+  width: 100%;
+
+  min-height: 56px;
+
+  padding:
+    12px 15px;
+
+  font-family:
+    'Barlow Condensed',
+    sans-serif;
+
+  font-size: 1rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.photo-primary {
+  border: none;
+
+  background:
+    var(--azul);
+
+  color:
+    var(--creme);
+
+  box-shadow:
+    5px 5px 0
+    var(--coral);
+}
+
+.photo-secondary {
+  border:
+    2px solid
+    var(--azul);
+
+  background:
+    var(--amarelo);
+
+  color:
+    var(--azul);
+}
+
+.photo-tertiary {
+  border:
+    2px solid
+    var(--azul);
+
+  background:
+    transparent;
+
+  color:
+    var(--azul);
+}
+
+.photo-back {
+  margin-top: 26px;
+
+  border: none;
+
+  background:
+    transparent;
+
+  color:
+    var(--azul);
+
+  font-family:
+    'Barlow Condensed',
+    sans-serif;
+
+  font-size: 0.76rem;
+
+  font-weight: 900;
+
+  text-decoration:
+    underline;
+
+  cursor: pointer;
+}
+
+
+/* ======================================================
+   CANVAS
+====================================================== */
+
+.photo-canvas {
+  position: fixed;
+
+  width: 1px;
+  height: 1px;
+
+  left: -9999px;
+  top: -9999px;
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+
+/* ======================================================
+   CELULARES PEQUENOS
+====================================================== */
+
+@media (max-width: 350px) {
+
+  .photo-page {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+
+  .camera-overlay-bottom {
+    height: 56px;
+
+    gap: 7px;
+
+    padding: 7px;
+  }
+
+  .camera-overlay-bottom strong {
+    font-size: 0.95rem;
+  }
+
+  .camera-footer-brand {
+    font-size: 0.42rem;
+  }
+}
+
+
+/* ======================================================
+   TABLET
+====================================================== */
+
+@media (min-width: 600px) {
+
+  .photo-container {
+    max-width: 470px;
+  }
+
+}

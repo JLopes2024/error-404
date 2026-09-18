@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'Barlow', sans-serif;
+
+  --creme: #f6eed8;
+  --amarelo: #fada34;
+  --azul: #0a214d;
+  --coral: #f86a6e;
+  --turquesa: #2bd0d4;
+
+  --branco: #fffdf8;
+  --preto: #111111;
+
+  color: var(--azul);
+  background: var(--creme);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(250, 218, 52, 0.18),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(43, 208, 212, 0.12),
+      transparent 30%
+    ),
+    var(--creme);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

@@ -1,0 +1,1583 @@
+/* =========================================================
+   VIVA FEST — ERRO 404
+   MOBILE FIRST
+========================================================= */
+
+.start-page,
+.game-page,
+.result-page {
+  min-height: 100svh;
+  width: 100%;
+
+  position: relative;
+
+  overflow-x: hidden;
+
+  background: var(--creme);
+}
+
+button,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   START PAGE
+========================================================= */
+
+.start-page {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 28px 20px;
+
+  overflow: hidden;
+}
+
+.start-page::before {
+  content: '';
+
+  position: absolute;
+
+  width: 240px;
+  height: 48px;
+
+  top: 7%;
+  left: -65px;
+
+  background: var(--turquesa);
+
+  transform: rotate(-8deg);
+}
+
+.start-page::after {
+  content: '';
+
+  position: absolute;
+
+  width: 300px;
+  height: 54px;
+
+  bottom: 7%;
+  right: -95px;
+
+  background: var(--coral);
+
+  transform: rotate(-6deg);
+}
+
+.start-container {
+  width: 100%;
+  max-width: 420px;
+
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+}
+
+.start-eyebrow {
+  margin-bottom: 20px;
+
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: 0.85rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+.error-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  margin-bottom: 30px;
+}
+
+.error-background {
+  position: absolute;
+
+  width: 260px;
+  height: 95px;
+
+  background: var(--amarelo);
+
+  transform: rotate(-3deg);
+
+  z-index: -1;
+}
+
+.error-title {
+  font-family: 'Anton', sans-serif;
+
+  font-size: clamp(4.5rem, 21vw, 7rem);
+
+  line-height: 0.9;
+
+  color: var(--azul);
+
+  text-transform: uppercase;
+}
+
+.error-title span {
+  display: inline-block;
+
+  color: var(--coral);
+
+  transform: rotate(4deg);
+}
+
+.start-subtitle {
+  margin-bottom: 18px;
+
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: clamp(2rem, 9vw, 3rem);
+
+  font-weight: 900;
+
+  line-height: 0.95;
+
+  text-transform: uppercase;
+}
+
+.start-subtitle strong {
+  position: relative;
+
+  display: inline-block;
+
+  z-index: 1;
+}
+
+.start-subtitle strong::before {
+  content: '';
+
+  position: absolute;
+
+  left: -8%;
+  bottom: 0;
+
+  width: 116%;
+  height: 45%;
+
+  background: var(--turquesa);
+
+  transform: rotate(-2deg);
+
+  z-index: -1;
+}
+
+.start-description {
+  max-width: 320px;
+
+  margin: 0 auto 32px;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  line-height: 1.45;
+}
+
+.start-button {
+  width: 100%;
+
+  min-height: 62px;
+
+  padding: 14px 20px;
+
+  background: var(--azul);
+
+  color: var(--creme);
+
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: 1.2rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  box-shadow: 6px 6px 0 var(--coral);
+
+  cursor: pointer;
+}
+
+.start-button:active {
+  transform: translate(4px, 4px);
+
+  box-shadow: 2px 2px 0 var(--coral);
+}
+
+.start-warning {
+  margin-top: 22px;
+
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: 0.85rem;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  opacity: 0.65;
+}
+
+.decorative-symbol {
+  position: absolute;
+
+  font-family: 'Anton', sans-serif;
+
+  pointer-events: none;
+}
+
+.symbol-one {
+  top: 14%;
+  right: 7%;
+
+  font-size: 3rem;
+
+  transform: rotate(10deg);
+}
+
+.symbol-two {
+  bottom: 18%;
+  left: 7%;
+
+  font-size: 2.6rem;
+
+  transform: rotate(-14deg);
+}
+
+.symbol-three {
+  top: 34%;
+  left: 4%;
+
+  font-size: 2rem;
+
+  color: var(--coral);
+}
+
+
+/* =========================================================
+   GAME PAGE
+========================================================= */
+
+.game-page {
+  padding:
+    max(16px, env(safe-area-inset-top))
+    16px
+    max(28px, env(safe-area-inset-bottom));
+}
+
+.game-page::before {
+  content: '';
+
+  position: fixed;
+
+  width: 180px;
+  height: 32px;
+
+  top: 38%;
+  right: -65px;
+
+  background: var(--turquesa);
+
+  opacity: 0.18;
+
+  transform: rotate(-10deg);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.game-header {
+  width: 100%;
+  max-width: 430px;
+
+  margin: 0 auto 20px;
+
+  display: grid;
+
+  grid-template-columns: 92px 1fr;
+
+  gap: 14px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   CRONÔMETRO
+========================================================= */
+
+.game-timer {
+  min-height: 66px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 8px;
+
+  background: var(--azul);
+
+  color: var(--creme);
+
+  border: 2px solid var(--azul);
+
+  box-shadow: 4px 4px 0 var(--coral);
+
+  transform: rotate(-1deg);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.game-timer-label {
+  margin-bottom: 2px;
+
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: 0.62rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.14em;
+}
+
+.game-timer strong {
+  font-family: 'Anton', sans-serif;
+
+  font-size: 1.55rem;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 0.04em;
+}
+
+.game-timer--critical {
+  background: var(--coral);
+
+  box-shadow: 4px 4px 0 var(--azul);
+
+  animation:
+    timerPulse 0.7s
+    infinite alternate;
+}
+
+@keyframes timerPulse {
+  from {
+    transform:
+      rotate(-1deg)
+      scale(1);
+  }
+
+  to {
+    transform:
+      rotate(-1deg)
+      scale(1.04);
+  }
+}
+
+.game-timer--very-critical {
+  background: var(--coral);
+
+  box-shadow:
+    4px 4px 0 var(--azul);
+
+  animation:
+    criticalTimer 0.35s
+    infinite alternate;
+}
+
+@keyframes criticalTimer {
+  from {
+    transform:
+      rotate(-1deg)
+      scale(1);
+  }
+
+  to {
+    transform:
+      rotate(1deg)
+      scale(1.08);
+  }
+}
+
+
+/* =========================================================
+   PROGRESSO
+========================================================= */
+
+.game-progress {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 9px 12px;
+
+  border: 2px solid var(--azul);
+
+  background: rgba(
+    255,
+    253,
+    248,
+    0.75
+  );
+}
+
+.game-progress-info {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-bottom: 8px;
+
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: 0.78rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.08em;
+}
+
+.game-progress-info strong {
+  font-size: 1rem;
+}
+
+.game-progress-track {
+  width: 100%;
+
+  height: 10px;
+
+  background:
+    rgba(10, 33, 77, 0.12);
+
+  overflow: hidden;
+}
+
+.game-progress-bar {
+  height: 100%;
+
+  background: var(--coral);
+
+  transition: width 0.3s ease;
+}
+
+
+/* =========================================================
+   CONTEÚDO
+========================================================= */
+
+.game-content {
+  width: 100%;
+
+  max-width: 430px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   SENHA RECUPERADA
+========================================================= */
+
+.game-password-status {
+  margin-bottom: 22px;
+
+  padding: 12px 14px;
+
+  border-left:
+    5px solid var(--turquesa);
+
+  background:
+    rgba(43, 208, 212, 0.08);
+}
+
+.game-password-status > span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: 0.68rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+.password-display {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  margin: 18px 0 28px;
+}
+
+.game-password-status
+.password-display {
+  justify-content: flex-start;
+
+  margin: 0;
+}
+
+.password-letter {
+  width: 39px;
+  height: 43px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-bottom:
+    3px solid var(--azul);
+
+  color: var(--azul);
+
+  font-family: 'Anton', sans-serif;
+
+  font-size: 1.5rem;
+}
+
+.password-letter--unlocked {
+  border:
+    2px solid var(--azul);
+
+  background: var(--amarelo);
+
+  box-shadow:
+    3px 3px 0 var(--azul);
+
+  transform: rotate(-2deg);
+}
+
+.password-letter--unlocked:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+
+/* =========================================================
+   PADRÃO
+========================================================= */
+
+.game-stage-label {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  padding: 6px 12px;
+
+  background: var(--amarelo);
+
+  color: var(--azul);
+
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: 0.82rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+
+  transform: rotate(-1deg);
+}
+
+
+/* =========================================================
+   QUESTION CARD
+========================================================= */
+
+.question-card {
+  position: relative;
+
+  width: 100%;
+
+  padding: 20px 16px 18px;
+
+  background: var(--branco);
+
+  border:
+    3px solid var(--azul);
+
+  box-shadow:
+    7px 7px 0 var(--azul);
+}
+
+.question-card::before {
+  content: '';
+
+  position: absolute;
+
+  width: 90px;
+  height: 8px;
+
+  top: -7px;
+  right: 18px;
+
+  background: var(--coral);
+
+  transform: rotate(2deg);
+}
+
+.question-card-header {
+  margin-bottom: 12px;
+
+  color: var(--coral);
+
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: 0.75rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.question-card h2 {
+  margin-bottom: 22px;
+
+  color: var(--azul);
+
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size:
+    clamp(1.65rem, 7.5vw, 2.2rem);
+
+  font-weight: 900;
+
+  line-height: 1.05;
+
+  text-transform: uppercase;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   ALTERNATIVAS
+========================================================= */
+
+.question-options {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.question-option {
+  width: 100%;
+
+  min-height: 60px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px;
+
+  border:
+    2px solid var(--azul);
+
+  background: var(--creme);
+
+  color: var(--azul);
+
+  font-family: 'Anton', sans-serif;
+
+  font-size: 1.45rem;
+
+  line-height: 1;
+
+  box-shadow:
+    3px 3px 0 var(--azul);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease,
+    background 0.12s ease;
+}
+
+.question-option:hover {
+  background: var(--amarelo);
+}
+
+.question-option:active {
+  transform:
+    translate(3px, 3px);
+
+  box-shadow:
+    0 0 0 var(--azul);
+
+  background: var(--amarelo);
+}
+
+.question-option:disabled {
+  opacity: 0.45;
+
+  cursor: not-allowed;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   FEEDBACK
+========================================================= */
+
+.system-message {
+  width: 100%;
+
+  margin-top: 20px;
+
+  padding: 12px 14px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  border:
+    2px solid var(--azul);
+
+  box-shadow:
+    4px 4px 0 var(--azul);
+
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: 1rem;
+
+  font-weight: 900;
+
+  line-height: 1.1;
+
+  text-transform: uppercase;
+}
+
+.system-message-status {
+  flex: 0 0 auto;
+
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+
+  place-items: center;
+
+  background: var(--azul);
+
+  color: var(--creme);
+
+  font-family: 'Anton', sans-serif;
+
+  font-size: 1.5rem;
+}
+
+.system-message--error {
+  background: var(--coral);
+}
+
+.system-message--success {
+  background: var(--turquesa);
+}
+
+.system-message--info {
+  background: var(--amarelo);
+}
+
+
+/* =========================================================
+   HISTÓRICO
+========================================================= */
+
+.answers-history {
+  margin-top: 28px;
+
+  padding-top: 16px;
+
+  border-top:
+    2px dashed
+    rgba(10, 33, 77, 0.25);
+}
+
+.answers-history > span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: 0.7rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.answers-history-values {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.answers-history-values strong {
+  min-width: 43px;
+  height: 43px;
+
+  padding: 0 9px;
+
+  display: grid;
+
+  place-items: center;
+
+  background: var(--azul);
+
+  color: var(--creme);
+
+  font-family: 'Anton', sans-serif;
+
+  font-size: 1.2rem;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   QUEBRA DO PADRÃO
+========================================================= */
+
+.pattern-break {
+  width: 100%;
+
+  padding-bottom: 30px;
+
+  text-align: center;
+}
+
+.pattern-small {
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: 0.72rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+.pattern-sequence {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  margin: 18px 0 24px;
+}
+
+.pattern-sequence span {
+  min-width: 53px;
+  height: 53px;
+
+  padding: 0 8px;
+
+  display: grid;
+
+  place-items: center;
+
+  background: var(--azul);
+
+  color: var(--creme);
+
+  font-family: 'Anton', sans-serif;
+
+  font-size: 1.55rem;
+
+  transform: rotate(-2deg);
+}
+
+.pattern-sequence span:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.pattern-sequence
+.pattern-sequence-text {
+  min-width: 70px;
+
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: 0.95rem;
+
+  font-weight: 900;
+}
+
+.pattern-warning {
+  margin-bottom: 26px;
+
+  padding: 11px 14px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+
+  background: var(--amarelo);
+
+  border:
+    2px solid var(--azul);
+
+  transform: rotate(-1deg);
+}
+
+.pattern-warning span {
+  font-family: 'Anton', sans-serif;
+
+  font-size: 1.5rem;
+}
+
+.pattern-warning p {
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: 1rem;
+
+  font-weight: 900;
+
+  text-transform: uppercase;
+}
+
+.pattern-break h2 {
+  max-width: 350px;
+
+  margin: 0 auto 16px;
+
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: 2rem;
+
+  font-weight: 900;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   REGRA
+========================================================= */
+
+.pattern-rule {
+  width: 100%;
+
+  margin: 20px 0 22px;
+
+  padding: 16px;
+
+  border:
+    3px solid var(--azul);
+
+  background: var(--branco);
+
+  box-shadow:
+    5px 5px 0 var(--amarelo);
+
+  text-align: left;
+}
+
+.pattern-rule span {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  padding: 4px 8px;
+
+  background: var(--azul);
+
+  color: var(--creme);
+
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: 0.7rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.pattern-rule p {
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: 1.2rem;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.pattern-form {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.pattern-form input {
+  width: 100%;
+  height: 68px;
+
+  padding: 0 16px;
+
+  border:
+    3px solid var(--azul);
+
+  outline: none;
+
+  background: var(--branco);
+
+  color: var(--azul);
+
+  text-align: center;
+
+  font-family: 'Anton', sans-serif;
+
+  font-size: 2rem;
+
+  text-transform: uppercase;
+}
+
+.pattern-form input:focus {
+  box-shadow:
+    5px 5px 0 var(--turquesa);
+}
+
+.pattern-form button,
+.continue-button,
+.final-password-form button {
+  width: 100%;
+
+  min-height: 60px;
+
+  padding: 13px 18px;
+
+  border: none;
+
+  background: var(--azul);
+
+  color: var(--creme);
+
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: 1.1rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  box-shadow:
+    6px 6px 0 var(--coral);
+
+  cursor: pointer;
+}
+
+.pattern-form button:active,
+.continue-button:active,
+.final-password-form button:active {
+  transform:
+    translate(4px, 4px);
+
+  box-shadow:
+    2px 2px 0 var(--coral);
+}
+
+
+/* =========================================================
+   SUCESSO
+========================================================= */
+
+.pattern-success {
+  min-height: 68svh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding-bottom: 24px;
+
+  text-align: center;
+}
+
+.success-alert {
+  margin-bottom: 22px;
+
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: 0.78rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+.success-brush {
+  width: 100%;
+
+  margin-bottom: 24px;
+
+  padding: 18px 14px;
+
+  background: var(--turquesa);
+
+  border:
+    3px solid var(--azul);
+
+  transform: rotate(-2deg);
+}
+
+.success-brush span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: 1rem;
+
+  font-weight: 900;
+}
+
+.success-brush strong {
+  display: block;
+
+  font-family: 'Anton', sans-serif;
+
+  font-size:
+    clamp(2.7rem, 13vw, 4rem);
+
+  font-weight: 400;
+
+  line-height: 0.9;
+}
+
+.success-copy {
+  max-width: 310px;
+
+  margin-bottom: 28px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+.letter-unlocked {
+  width: 170px;
+
+  margin-bottom: 12px;
+
+  padding: 12px 14px 16px;
+
+  background: var(--amarelo);
+
+  border:
+    3px solid var(--azul);
+
+  box-shadow:
+    5px 5px 0 var(--azul);
+
+  transform: rotate(2deg);
+}
+
+.letter-unlocked span {
+  display: block;
+
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: 0.7rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.08em;
+}
+
+.letter-unlocked strong {
+  display: block;
+
+  font-family: 'Anton', sans-serif;
+
+  font-size: 4.5rem;
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.continue-button {
+  margin-top: 8px;
+
+  max-width: 340px;
+}
+
+
+/* =========================================================
+   SENHA FINAL
+========================================================= */
+
+.final-password {
+  min-height: 72svh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding-bottom: 24px;
+
+  text-align: center;
+}
+
+.final-password-eyebrow {
+  margin-bottom: 16px;
+
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: 0.75rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.14em;
+}
+
+.final-password h1 {
+  position: relative;
+
+  margin-bottom: 22px;
+
+  font-family: 'Anton', sans-serif;
+
+  font-size:
+    clamp(3.5rem, 17vw, 5rem);
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  z-index: 1;
+}
+
+.final-password h1::before {
+  content: '';
+
+  position: absolute;
+
+  left: -7%;
+  bottom: 3px;
+
+  width: 114%;
+  height: 42%;
+
+  background: var(--turquesa);
+
+  transform: rotate(-2deg);
+
+  z-index: -1;
+}
+
+.final-password
+> p:not(.final-password-eyebrow) {
+  max-width: 300px;
+
+  margin-bottom: 8px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+.final-password-form {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  margin-top: 4px;
+}
+
+.final-password-form input {
+  width: 100%;
+  height: 68px;
+
+  border:
+    3px solid var(--azul);
+
+  outline: none;
+
+  background: var(--branco);
+
+  color: var(--azul);
+
+  text-align: center;
+
+  text-transform: uppercase;
+
+  font-family: 'Anton', sans-serif;
+
+  font-size: 1.65rem;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* =========================================================
+   RESULTADO
+========================================================= */
+
+.result-page {
+  display: grid;
+
+  place-items: center;
+
+  padding: 24px;
+}
+
+.result-page--success {
+  background:
+    linear-gradient(
+      160deg,
+      rgba(43, 208, 212, 0.2),
+      transparent 50%
+    ),
+    var(--creme);
+}
+
+.result-card {
+  width: 100%;
+
+  max-width: 420px;
+
+  text-align: center;
+}
+
+.result-small {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  padding: 6px 12px;
+
+  background: var(--amarelo);
+
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: 0.78rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.13em;
+
+  transform: rotate(-2deg);
+}
+
+.result-card h1 {
+  margin-bottom: 26px;
+
+  font-family: 'Anton', sans-serif;
+
+  font-size:
+    clamp(3.8rem, 18vw, 5.8rem);
+
+  font-weight: 400;
+
+  line-height: 0.87;
+}
+
+.result-message {
+  margin-bottom: 30px;
+
+  padding: 20px 17px;
+
+  border:
+    3px solid var(--azul);
+
+  background: var(--branco);
+
+  box-shadow:
+    6px 6px 0 var(--turquesa);
+}
+
+.result-message p {
+  margin-bottom: 12px;
+
+  line-height: 1.4;
+}
+
+.result-message strong {
+  display: block;
+
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: 1.3rem;
+
+  line-height: 1.1;
+}
+
+.result-card > p {
+  margin-bottom: 28px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+.result-card button {
+  width: 100%;
+
+  min-height: 60px;
+
+  border: none;
+
+  background: var(--azul);
+
+  color: var(--creme);
+
+  font-family: 'Barlow Condensed', sans-serif;
+
+  font-size: 1.1rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  box-shadow:
+    6px 6px 0 var(--coral);
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   TELAS MUITO PEQUENAS
+========================================================= */
+
+@media (max-width: 350px) {
+  .game-page {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .game-header {
+    grid-template-columns:
+      82px 1fr;
+
+    gap: 10px;
+  }
+
+  .question-card h2 {
+    font-size: 1.45rem;
+  }
+
+  .question-option {
+    min-height: 54px;
+
+    font-size: 1.25rem;
+  }
+
+  .password-letter {
+    width: 35px;
+  }
+}
+
+
+/* =========================================================
+   TABLET / DESKTOP
+========================================================= */
+
+@media (min-width: 600px) {
+  .game-page {
+    padding: 28px;
+  }
+
+  .game-header,
+  .game-content {
+    max-width: 480px;
+  }
+}
